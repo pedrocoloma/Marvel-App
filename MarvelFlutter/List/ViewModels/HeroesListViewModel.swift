@@ -8,6 +8,19 @@
 
 import Foundation
 
+protocol HeroesListViewModelCoorrdinator {
+    func didSelect()
+}
+
 class HeroesListViewModel {
     
+    var coordinatorDelegate: HeroesListViewModelCoorrdinator?
+    
+    var heroes = [0]
+    
+    func didSelect(row: Int) {
+        coordinatorDelegate?.didSelect()
+    }
 }
+
+

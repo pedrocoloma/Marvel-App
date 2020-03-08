@@ -28,7 +28,15 @@ class AppCoordinator: Coordinator {
 //        listCoordinator = ListCoordinator()
 //        listCoordinator.start()
         let listViewModel = HeroesListViewModel()
+        listViewModel.coordinatorDelegate = self
         let heroesViewController = HeroesListViewController(viewModel: listViewModel)
         navigationController?.pushViewController(heroesViewController, animated: true)
+    }
+}
+
+extension AppCoordinator: HeroesListViewModelCoorrdinator {
+    func didSelect() {
+        let heroesDetailsViewController = HeroesDetailsViewController()
+        navigationController?.pushViewController(heroesDetailsViewController, animated: true)
     }
 }

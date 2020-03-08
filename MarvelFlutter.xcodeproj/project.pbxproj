@@ -22,6 +22,8 @@
 		F5799E87241596A500A07563 /* HeroeListDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5799E85241596A500A07563 /* HeroeListDetailsTableViewCell.swift */; };
 		F5799E88241596A500A07563 /* HeroeListDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5799E86241596A500A07563 /* HeroeListDetailsTableViewCell.xib */; };
 		F5799E8E24159F4B00A07563 /* HeroesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5799E8D24159F4B00A07563 /* HeroesListViewModel.swift */; };
+		F5799E922415A3C800A07563 /* HeroesDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5799E902415A3C800A07563 /* HeroesDetailsViewController.swift */; };
+		F5799E932415A3C800A07563 /* HeroesDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5799E912415A3C800A07563 /* HeroesDetailsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		F5799E85241596A500A07563 /* HeroeListDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroeListDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		F5799E86241596A500A07563 /* HeroeListDetailsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroeListDetailsTableViewCell.xib; sourceTree = "<group>"; };
 		F5799E8D24159F4B00A07563 /* HeroesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesListViewModel.swift; sourceTree = "<group>"; };
+		F5799E902415A3C800A07563 /* HeroesDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesDetailsViewController.swift; sourceTree = "<group>"; };
+		F5799E912415A3C800A07563 /* HeroesDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroesDetailsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +139,8 @@
 				F5799E7D241591E800A07563 /* HeroesListViewController.xib */,
 				F5799E85241596A500A07563 /* HeroeListDetailsTableViewCell.swift */,
 				F5799E86241596A500A07563 /* HeroeListDetailsTableViewCell.xib */,
+				F5799E902415A3C800A07563 /* HeroesDetailsViewController.swift */,
+				F5799E912415A3C800A07563 /* HeroesDetailsViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -239,6 +245,7 @@
 				F5799E5F24158B9000A07563 /* LaunchScreen.storyboard in Resources */,
 				F5799E5C24158B9000A07563 /* Assets.xcassets in Resources */,
 				F5799E7F241591E800A07563 /* HeroesListViewController.xib in Resources */,
+				F5799E932415A3C800A07563 /* HeroesDetailsViewController.xib in Resources */,
 				F5799E88241596A500A07563 /* HeroeListDetailsTableViewCell.xib in Resources */,
 				F5799E7724158D0A00A07563 /* MainViewController.xib in Resources */,
 			);
@@ -261,6 +268,7 @@
 				F5799E7E241591E800A07563 /* HeroesListViewController.swift in Sources */,
 				F5799E792415901C00A07563 /* Coordinator.swift in Sources */,
 				F5799E5324158B8F00A07563 /* AppDelegate.swift in Sources */,
+				F5799E922415A3C800A07563 /* HeroesDetailsViewController.swift in Sources */,
 				F5799E832415926000A07563 /* ListCoordinator.swift in Sources */,
 				F5799E7B2415903600A07563 /* AppCoordinator.swift in Sources */,
 				F5799E8E24159F4B00A07563 /* HeroesListViewModel.swift in Sources */,
