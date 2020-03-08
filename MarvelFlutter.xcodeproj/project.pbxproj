@@ -14,6 +14,8 @@
 		F5799E6A24158B9000A07563 /* MarvelFlutterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5799E6924158B9000A07563 /* MarvelFlutterTests.swift */; };
 		F5799E7624158D0A00A07563 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5799E7424158D0A00A07563 /* MainViewController.swift */; };
 		F5799E7724158D0A00A07563 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5799E7524158D0A00A07563 /* MainViewController.xib */; };
+		F5799E792415901C00A07563 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5799E782415901C00A07563 /* Coordinator.swift */; };
+		F5799E7B2415903600A07563 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5799E7A2415903600A07563 /* AppCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		F5799E6B24158B9000A07563 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5799E7424158D0A00A07563 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F5799E7524158D0A00A07563 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		F5799E782415901C00A07563 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		F5799E7A2415903600A07563 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,11 +85,13 @@
 			children = (
 				F5799E5224158B8F00A07563 /* AppDelegate.swift */,
 				F5799E5424158B8F00A07563 /* SceneDelegate.swift */,
+				F5799E7A2415903600A07563 /* AppCoordinator.swift */,
 				F5799E7424158D0A00A07563 /* MainViewController.swift */,
 				F5799E7524158D0A00A07563 /* MainViewController.xib */,
 				F5799E5B24158B9000A07563 /* Assets.xcassets */,
 				F5799E5D24158B9000A07563 /* LaunchScreen.storyboard */,
 				F5799E6024158B9000A07563 /* Info.plist */,
+				F5799E782415901C00A07563 /* Coordinator.swift */,
 			);
 			path = MarvelFlutter;
 			sourceTree = "<group>";
@@ -200,7 +206,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5799E792415901C00A07563 /* Coordinator.swift in Sources */,
 				F5799E5324158B8F00A07563 /* AppDelegate.swift in Sources */,
+				F5799E7B2415903600A07563 /* AppCoordinator.swift in Sources */,
 				F5799E5524158B8F00A07563 /* SceneDelegate.swift in Sources */,
 				F5799E7624158D0A00A07563 /* MainViewController.swift in Sources */,
 			);
