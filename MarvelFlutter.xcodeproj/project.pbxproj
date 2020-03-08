@@ -1,0 +1,470 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F5799E5324158B8F00A07563 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5799E5224158B8F00A07563 /* AppDelegate.swift */; };
+		F5799E5524158B8F00A07563 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5799E5424158B8F00A07563 /* SceneDelegate.swift */; };
+		F5799E5724158B8F00A07563 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5799E5624158B8F00A07563 /* ViewController.swift */; };
+		F5799E5A24158B8F00A07563 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5799E5824158B8F00A07563 /* Main.storyboard */; };
+		F5799E5C24158B9000A07563 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5799E5B24158B9000A07563 /* Assets.xcassets */; };
+		F5799E5F24158B9000A07563 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5799E5D24158B9000A07563 /* LaunchScreen.storyboard */; };
+		F5799E6A24158B9000A07563 /* MarvelFlutterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5799E6924158B9000A07563 /* MarvelFlutterTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F5799E6624158B9000A07563 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F5799E4724158B8F00A07563 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F5799E4E24158B8F00A07563;
+			remoteInfo = MarvelFlutter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F5799E4F24158B8F00A07563 /* MarvelFlutter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelFlutter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5799E5224158B8F00A07563 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F5799E5424158B8F00A07563 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F5799E5624158B8F00A07563 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F5799E5924158B8F00A07563 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F5799E5B24158B9000A07563 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F5799E5E24158B9000A07563 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F5799E6024158B9000A07563 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5799E6524158B9000A07563 /* MarvelFlutterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarvelFlutterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5799E6924158B9000A07563 /* MarvelFlutterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelFlutterTests.swift; sourceTree = "<group>"; };
+		F5799E6B24158B9000A07563 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F5799E4C24158B8F00A07563 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5799E6224158B9000A07563 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F5799E4624158B8F00A07563 = {
+			isa = PBXGroup;
+			children = (
+				F5799E5124158B8F00A07563 /* MarvelFlutter */,
+				F5799E6824158B9000A07563 /* MarvelFlutterTests */,
+				F5799E5024158B8F00A07563 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F5799E5024158B8F00A07563 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F5799E4F24158B8F00A07563 /* MarvelFlutter.app */,
+				F5799E6524158B9000A07563 /* MarvelFlutterTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F5799E5124158B8F00A07563 /* MarvelFlutter */ = {
+			isa = PBXGroup;
+			children = (
+				F5799E5224158B8F00A07563 /* AppDelegate.swift */,
+				F5799E5424158B8F00A07563 /* SceneDelegate.swift */,
+				F5799E5624158B8F00A07563 /* ViewController.swift */,
+				F5799E5824158B8F00A07563 /* Main.storyboard */,
+				F5799E5B24158B9000A07563 /* Assets.xcassets */,
+				F5799E5D24158B9000A07563 /* LaunchScreen.storyboard */,
+				F5799E6024158B9000A07563 /* Info.plist */,
+			);
+			path = MarvelFlutter;
+			sourceTree = "<group>";
+		};
+		F5799E6824158B9000A07563 /* MarvelFlutterTests */ = {
+			isa = PBXGroup;
+			children = (
+				F5799E6924158B9000A07563 /* MarvelFlutterTests.swift */,
+				F5799E6B24158B9000A07563 /* Info.plist */,
+			);
+			path = MarvelFlutterTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F5799E4E24158B8F00A07563 /* MarvelFlutter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5799E6E24158B9000A07563 /* Build configuration list for PBXNativeTarget "MarvelFlutter" */;
+			buildPhases = (
+				F5799E4B24158B8F00A07563 /* Sources */,
+				F5799E4C24158B8F00A07563 /* Frameworks */,
+				F5799E4D24158B8F00A07563 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MarvelFlutter;
+			productName = MarvelFlutter;
+			productReference = F5799E4F24158B8F00A07563 /* MarvelFlutter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F5799E6424158B9000A07563 /* MarvelFlutterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5799E7124158B9000A07563 /* Build configuration list for PBXNativeTarget "MarvelFlutterTests" */;
+			buildPhases = (
+				F5799E6124158B9000A07563 /* Sources */,
+				F5799E6224158B9000A07563 /* Frameworks */,
+				F5799E6324158B9000A07563 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F5799E6724158B9000A07563 /* PBXTargetDependency */,
+			);
+			name = MarvelFlutterTests;
+			productName = MarvelFlutterTests;
+			productReference = F5799E6524158B9000A07563 /* MarvelFlutterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F5799E4724158B8F00A07563 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Pedro Felipe Coloma de Araujo";
+				TargetAttributes = {
+					F5799E4E24158B8F00A07563 = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					F5799E6424158B9000A07563 = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = F5799E4E24158B8F00A07563;
+					};
+				};
+			};
+			buildConfigurationList = F5799E4A24158B8F00A07563 /* Build configuration list for PBXProject "MarvelFlutter" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F5799E4624158B8F00A07563;
+			productRefGroup = F5799E5024158B8F00A07563 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F5799E4E24158B8F00A07563 /* MarvelFlutter */,
+				F5799E6424158B9000A07563 /* MarvelFlutterTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F5799E4D24158B8F00A07563 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5799E5F24158B9000A07563 /* LaunchScreen.storyboard in Resources */,
+				F5799E5C24158B9000A07563 /* Assets.xcassets in Resources */,
+				F5799E5A24158B8F00A07563 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5799E6324158B9000A07563 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F5799E4B24158B8F00A07563 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5799E5724158B8F00A07563 /* ViewController.swift in Sources */,
+				F5799E5324158B8F00A07563 /* AppDelegate.swift in Sources */,
+				F5799E5524158B8F00A07563 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5799E6124158B9000A07563 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5799E6A24158B9000A07563 /* MarvelFlutterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F5799E6724158B9000A07563 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F5799E4E24158B8F00A07563 /* MarvelFlutter */;
+			targetProxy = F5799E6624158B9000A07563 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F5799E5824158B8F00A07563 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5799E5924158B8F00A07563 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F5799E5D24158B9000A07563 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5799E5E24158B9000A07563 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F5799E6C24158B9000A07563 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F5799E6D24158B9000A07563 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F5799E6F24158B9000A07563 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MarvelFlutter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pedrocoloma.com.MarvelFlutter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F5799E7024158B9000A07563 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MarvelFlutter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pedrocoloma.com.MarvelFlutter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F5799E7224158B9000A07563 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MarvelFlutterTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pedrocoloma.com.MarvelFlutterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MarvelFlutter.app/MarvelFlutter";
+			};
+			name = Debug;
+		};
+		F5799E7324158B9000A07563 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MarvelFlutterTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pedrocoloma.com.MarvelFlutterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MarvelFlutter.app/MarvelFlutter";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F5799E4A24158B8F00A07563 /* Build configuration list for PBXProject "MarvelFlutter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5799E6C24158B9000A07563 /* Debug */,
+				F5799E6D24158B9000A07563 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5799E6E24158B9000A07563 /* Build configuration list for PBXNativeTarget "MarvelFlutter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5799E6F24158B9000A07563 /* Debug */,
+				F5799E7024158B9000A07563 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5799E7124158B9000A07563 /* Build configuration list for PBXNativeTarget "MarvelFlutterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5799E7224158B9000A07563 /* Debug */,
+				F5799E7324158B9000A07563 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F5799E4724158B8F00A07563 /* Project object */;
+}
