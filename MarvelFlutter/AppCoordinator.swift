@@ -12,15 +12,23 @@ class AppCoordinator: Coordinator {
     
     var window: UIWindow?
     
+    var listCoordinator = ListCoordinator()
+    
     init(window: UIWindow?) {
+        super.init()
         self.window = window
-        window?.rootViewController = MainViewController()
+        navigationController = UINavigationController()
+        window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
-    }
-    
-    func start() {
         
+        start()
     }
     
-    
+    override func start() {
+//        listCoordinator = ListCoordinator()
+//        listCoordinator.start()
+        let listViewModel = HeroesListViewModel()
+        let heroesViewController = HeroesListViewController(viewModel: listViewModel)
+        navigationController?.pushViewController(heroesViewController, animated: true)
+    }
 }
