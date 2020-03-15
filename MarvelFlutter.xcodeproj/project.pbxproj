@@ -24,6 +24,7 @@
 		F5799E8E24159F4B00A07563 /* HeroesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5799E8D24159F4B00A07563 /* HeroesListViewModel.swift */; };
 		F5799E922415A3C800A07563 /* HeroesDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5799E902415A3C800A07563 /* HeroesDetailsViewController.swift */; };
 		F5799E932415A3C800A07563 /* HeroesDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5799E912415A3C800A07563 /* HeroesDetailsViewController.xib */; };
+		F5799E952415D6C800A07563 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5799E942415D6C800A07563 /* API.swift */; };
 		F5799E9B2418578800A07563 /* CryptoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5799E9A2418578800A07563 /* CryptoHelper.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 		F5799E8D24159F4B00A07563 /* HeroesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesListViewModel.swift; sourceTree = "<group>"; };
 		F5799E902415A3C800A07563 /* HeroesDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesDetailsViewController.swift; sourceTree = "<group>"; };
 		F5799E912415A3C800A07563 /* HeroesDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroesDetailsViewController.xib; sourceTree = "<group>"; };
+		F5799E942415D6C800A07563 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		F5799E9A2418578800A07563 /* CryptoHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,6 +113,7 @@
 				F5799E6024158B9000A07563 /* Info.plist */,
 				F5799E782415901C00A07563 /* Coordinator.swift */,
 				F5799E80241591F600A07563 /* List */,
+				F5799E942415D6C800A07563 /* API.swift */,
 				F5799E9C2418595700A07563 /* Utils */,
 			);
 			path = MarvelFlutter;
@@ -297,6 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5799E952415D6C800A07563 /* API.swift in Sources */,
 				F5799E7E241591E800A07563 /* HeroesListViewController.swift in Sources */,
 				F5799E792415901C00A07563 /* Coordinator.swift in Sources */,
 				F5799E5324158B8F00A07563 /* AppDelegate.swift in Sources */,
