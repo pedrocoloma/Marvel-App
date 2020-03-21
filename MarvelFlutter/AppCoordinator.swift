@@ -20,7 +20,6 @@ class AppCoordinator: Coordinator {
         navigationController = UINavigationController()
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
-        
         start()
     }
     
@@ -29,12 +28,12 @@ class AppCoordinator: Coordinator {
 //        listCoordinator.start()
         let listViewModel = HeroesListViewModel()
         listViewModel.coordinatorDelegate = self
-        let heroesViewController = HeroesListViewController(viewModel: listViewModel)
+        let heroesViewController = HeroesListViewController(listViewModel)
         navigationController?.pushViewController(heroesViewController, animated: true)
     }
 }
 
-extension AppCoordinator: HeroesListViewModelCoorrdinator {
+extension AppCoordinator: HeroesListViewModelCoorrdinatorDelegate {
     func didSelect() {
         let heroesDetailsViewController = HeroesDetailsViewController()
         navigationController?.pushViewController(heroesDetailsViewController, animated: true)

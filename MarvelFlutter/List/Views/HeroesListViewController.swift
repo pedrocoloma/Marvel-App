@@ -12,39 +12,38 @@ class HeroesListViewController: UIViewController {
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
-    
+
     var viewModel: HeroesListViewModel?
-    
-    init(viewModel: HeroesListViewModel) {
-        
-        self.viewModel = viewModel
-        
+
+    required init?(coder aDeccoder: NSCoder) {
         super.init(nibName: nil, bundle: nil)
     }
     
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
+    init(_ viewModel: HeroesListViewModel) {
+        super.init(nibName: nil, bundle: nil)
+        self.viewModel = viewModel
+        self.viewModel?.viewDelegate = self
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         tableView.delegate = self
         tableView.dataSource = self
-        
         tableView.register(HeroeListDetailsTableViewCell.self, forCellReuseIdentifier: "cell")
+
+        self.title = "Comics"
     }
 }
 
-
 extension HeroesListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return viewModel?.comics?.data.results.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = "teste"
+        cell.textLabel?.text = viewModel?.comics?.data.results[indexPath.row].title
         return cell
     }
     
@@ -52,5 +51,12 @@ extension HeroesListViewController: UITableViewDelegate, UITableViewDataSource {
         viewModel?.didSelect(row: indexPath.row)
     }
     
-    
+}
+
+extension HeroesListViewController: HeroesListViewModelViewDelegate {
+    func didLoadComicsWithSuccess() {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
 }

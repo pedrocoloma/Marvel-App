@@ -8,19 +8,45 @@
 
 import Foundation
 
-protocol HeroesListViewModelCoorrdinator {
+protocol HeroesListViewModelCoorrdinatorDelegate: AnyObject {
     func didSelect()
+}
+
+protocol HeroesListViewModelViewDelegate: AnyObject {
+    func didLoadComicsWithSuccess()
 }
 
 class HeroesListViewModel {
     
-    var coordinatorDelegate: HeroesListViewModelCoorrdinator?
+    var comics: ComicsModel?
+    var myApi = API()
     
-    var heroes = [0]
+    var coordinatorDelegate: HeroesListViewModelCoorrdinatorDelegate?
+    var viewDelegate: HeroesListViewModelViewDelegate?
+    
+    func getData() {
+        let api = API()
+        api.fetch(endpoint: .characters, callback: { (data, response, error) in
+            
+            if let data = data {
+                do {
+                    let json = try JSONDecoder().decode(ComicsModel.self, from: data)
+                    
+                    self.comics = json
+                    self.viewDelegate?.didLoadComicsWithSuccess()
+                    
+                } catch let error as NSError {
+                    print("Failed to load: \(error.localizedDescription)")
+                }
+            }
+        })
+    }
+    
+    init() {
+        getData()
+    }
     
     func didSelect(row: Int) {
         coordinatorDelegate?.didSelect()
     }
 }
-
-
