@@ -1,5 +1,5 @@
 //
-//  HeroesDetailsViewModel.swift
+//  ComicsDetailsViewModel.swift
 //  MarvelFlutter
 //
 //  Created by Pedro Felipe Coloma de Araujo on 21/03/20.
@@ -8,14 +8,14 @@
 
 import Foundation
 
-protocol HeroesDetailsViewModelViewDelegate: AnyObject {
+protocol ComicsDetailsViewModelViewDelegate: AnyObject {
     func didLoadImageWithSuccess(image: Data)
 }
 
-class HeroesDetailsViewModel {
+class ComicsDetailsViewModel {
     
     var comic: Comic?
-    var viewDelegate: HeroesDetailsViewModelViewDelegate?
+    var viewDelegate: ComicsDetailsViewModelViewDelegate?
     
     init(_ comic: Comic) {
         getImage()

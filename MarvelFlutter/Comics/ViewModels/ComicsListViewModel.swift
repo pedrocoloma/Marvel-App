@@ -1,5 +1,5 @@
 //
-//  ListViewModel.swift
+//  ComicsListViewModel.swift
 //  MarvelFlutter
 //
 //  Created by Pedro Felipe Coloma de Araujo on 08/03/20.
@@ -8,21 +8,21 @@
 
 import Foundation
 
-protocol HeroesListViewModelCoorrdinatorDelegate: AnyObject {
+protocol ComicsListViewModelCoorrdinatorDelegate: AnyObject {
     func didSelect(comic: Comic)
 }
 
-protocol HeroesListViewModelViewDelegate: AnyObject {
+protocol ComicsListViewModelViewDelegate: AnyObject {
     func didLoadComicsWithSuccess()
 }
 
-class HeroesListViewModel {
+class ComicsListViewModel {
     
     var comics: [Comic]?
     var myApi = API()
     
-    var coordinatorDelegate: HeroesListViewModelCoorrdinatorDelegate?
-    var viewDelegate: HeroesListViewModelViewDelegate?
+    var coordinatorDelegate: ComicsListViewModelCoorrdinatorDelegate?
+    var viewDelegate: ComicsListViewModelViewDelegate?
     
     init() {
         getData()

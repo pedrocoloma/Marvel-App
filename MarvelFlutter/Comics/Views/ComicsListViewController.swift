@@ -1,5 +1,5 @@
 //
-//  HeroesViewController.swift
+//  ComicsListViewController.swift
 //  MarvelFlutter
 //
 //  Created by Pedro Felipe Coloma de Araujo on 08/03/20.
@@ -8,18 +8,18 @@
 
 import UIKit
 
-class HeroesListViewController: UIViewController {
+class ComicsListViewController: UIViewController {
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
 
-    var viewModel: HeroesListViewModel?
+    var viewModel: ComicsListViewModel?
 
     required init?(coder aDeccoder: NSCoder) {
         super.init(nibName: nil, bundle: nil)
     }
     
-    init(_ viewModel: HeroesListViewModel) {
+    init(_ viewModel: ComicsListViewModel) {
         super.init(nibName: nil, bundle: nil)
         self.viewModel = viewModel
         self.viewModel?.viewDelegate = self
@@ -30,13 +30,13 @@ class HeroesListViewController: UIViewController {
 
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(HeroeListDetailsTableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(ComicsListDetailsTableViewCell.self, forCellReuseIdentifier: "cell")
 
         self.title = "Comics"
     }
 }
 
-extension HeroesListViewController: UITableViewDelegate, UITableViewDataSource {
+extension ComicsListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel?.comics?.count ?? 0
     }
@@ -53,7 +53,7 @@ extension HeroesListViewController: UITableViewDelegate, UITableViewDataSource {
     
 }
 
-extension HeroesListViewController: HeroesListViewModelViewDelegate {
+extension ComicsListViewController: ComicsListViewModelViewDelegate {
     func didLoadComicsWithSuccess() {
         DispatchQueue.main.async {
             self.tableView.reloadData()

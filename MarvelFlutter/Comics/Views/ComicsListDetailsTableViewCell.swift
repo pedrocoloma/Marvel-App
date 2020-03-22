@@ -1,5 +1,5 @@
 //
-//  HeroeDetailsTableViewCell.swift
+//  ComicsListDetailsTableViewCell.swift
 //  MarvelFlutter
 //
 //  Created by Pedro Felipe Coloma de Araujo on 08/03/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HeroeListDetailsTableViewCell: UITableViewCell {
+class ComicsListDetailsTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()

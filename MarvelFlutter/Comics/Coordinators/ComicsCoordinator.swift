@@ -1,5 +1,5 @@
 //
-//  ListCoordinator.swift
+//  ComicsCoordinator.swift
 //  MarvelFlutter
 //
 //  Created by Pedro Felipe Coloma de Araujo on 08/03/20.
@@ -8,10 +8,12 @@
 
 import Foundation
 
-class ListCoordinator: Coordinator {
+class ComicsCoordinator: Coordinator {
     
     override func start() {
-//        let heroesViewController = HeroesViewController()
+//        let listViewModel = HeroesListViewModel()
+////        listViewModel.coordinatorDelegate = self
+//        let heroesViewController = HeroesListViewController(viewModel: listViewModel)
 //        navigationController?.pushViewController(heroesViewController, animated: true)
     }
 }

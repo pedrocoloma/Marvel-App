@@ -1,5 +1,5 @@
 //
-//  HeroesDetailsViewController.swift
+//  ComicsDetailsViewController.swift
 //  MarvelFlutter
 //
 //  Created by Pedro Felipe Coloma de Araujo on 08/03/20.
@@ -8,19 +8,19 @@
 
 import UIKit
 
-class HeroesDetailsViewController: UIViewController {
+class ComicsDetailsViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var comicsTitleLabel: UILabel!
     @IBOutlet weak var comicsDescriptionLabel: UILabel!
     
-    var viewModel: HeroesDetailsViewModel?
+    var viewModel: ComicsDetailsViewModel?
     
     required init?(coder aDecoder: NSCoder) {
         super.init(nibName: nil, bundle: nil)
     }
     
-    init(_ viewModel: HeroesDetailsViewModel) {
+    init(_ viewModel: ComicsDetailsViewModel) {
         super.init(nibName: nil, bundle: nil)
         self.viewModel = viewModel
         viewModel.viewDelegate = self
@@ -48,7 +48,7 @@ class HeroesDetailsViewController: UIViewController {
     }
 }
 
-extension HeroesDetailsViewController: HeroesDetailsViewModelViewDelegate {
+extension ComicsDetailsViewController: ComicsDetailsViewModelViewDelegate {
     func didLoadImageWithSuccess(image: Data) {
         DispatchQueue.main.async {
             self.imageView.image = UIImage(data: image)

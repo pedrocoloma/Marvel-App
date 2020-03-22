@@ -12,7 +12,7 @@ class AppCoordinator: Coordinator {
     
     var window: UIWindow?
     
-    var listCoordinator = ListCoordinator()
+    var listCoordinator = ComicsCoordinator()
     
     init(window: UIWindow?) {
         super.init()
@@ -26,17 +26,17 @@ class AppCoordinator: Coordinator {
     override func start() {
 //        listCoordinator = ListCoordinator()
 //        listCoordinator.start()
-        let listViewModel = HeroesListViewModel()
+        let listViewModel = ComicsListViewModel()
         listViewModel.coordinatorDelegate = self
-        let heroesViewController = HeroesListViewController(listViewModel)
+        let heroesViewController = ComicsListViewController(listViewModel)
         navigationController?.pushViewController(heroesViewController, animated: true)
     }
 }
 
-extension AppCoordinator: HeroesListViewModelCoorrdinatorDelegate {
+extension AppCoordinator: ComicsListViewModelCoorrdinatorDelegate {
     func didSelect(comic: Comic) {
-        let heroesDetailsViewModel = HeroesDetailsViewModel(comic)
-        let heroesDetailsViewController = HeroesDetailsViewController(heroesDetailsViewModel)
+        let heroesDetailsViewModel = ComicsDetailsViewModel(comic)
+        let heroesDetailsViewController = ComicsDetailsViewController(heroesDetailsViewModel)
         navigationController?.pushViewController(heroesDetailsViewController, animated: true)
     }
 }
