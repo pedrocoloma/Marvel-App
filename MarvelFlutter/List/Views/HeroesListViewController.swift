@@ -38,12 +38,12 @@ class HeroesListViewController: UIViewController {
 
 extension HeroesListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel?.comics?.data.results.count ?? 0
+        return viewModel?.comics?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = viewModel?.comics?.data.results[indexPath.row].title
+        cell.textLabel?.text = viewModel?.comics?[indexPath.row].title
         return cell
     }
     

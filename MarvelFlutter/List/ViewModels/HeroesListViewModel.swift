@@ -9,7 +9,7 @@
 import Foundation
 
 protocol HeroesListViewModelCoorrdinatorDelegate: AnyObject {
-    func didSelect()
+    func didSelect(comic: Comic)
 }
 
 protocol HeroesListViewModelViewDelegate: AnyObject {
@@ -18,21 +18,25 @@ protocol HeroesListViewModelViewDelegate: AnyObject {
 
 class HeroesListViewModel {
     
-    var comics: ComicsModel?
+    var comics: [Comic]?
     var myApi = API()
     
     var coordinatorDelegate: HeroesListViewModelCoorrdinatorDelegate?
     var viewDelegate: HeroesListViewModelViewDelegate?
     
+    init() {
+        getData()
+    }
+    
     func getData() {
         let api = API()
-        api.fetch(endpoint: .characters, callback: { (data, response, error) in
+        api.fetch(endpoint: .comics, callback: { (data, response, error) in
             
             if let data = data {
                 do {
                     let json = try JSONDecoder().decode(ComicsModel.self, from: data)
                     
-                    self.comics = json
+                    self.comics = json.data.results
                     self.viewDelegate?.didLoadComicsWithSuccess()
                     
                 } catch let error as NSError {
@@ -42,11 +46,7 @@ class HeroesListViewModel {
         })
     }
     
-    init() {
-        getData()
-    }
-    
     func didSelect(row: Int) {
-        coordinatorDelegate?.didSelect()
+        coordinatorDelegate?.didSelect(comic: (comics?[row])!)
     }
 }

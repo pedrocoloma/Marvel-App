@@ -34,8 +34,9 @@ class AppCoordinator: Coordinator {
 }
 
 extension AppCoordinator: HeroesListViewModelCoorrdinatorDelegate {
-    func didSelect() {
-        let heroesDetailsViewController = HeroesDetailsViewController()
+    func didSelect(comic: Comic) {
+        let heroesDetailsViewModel = HeroesDetailsViewModel(comic)
+        let heroesDetailsViewController = HeroesDetailsViewController(heroesDetailsViewModel)
         navigationController?.pushViewController(heroesDetailsViewController, animated: true)
     }
 }

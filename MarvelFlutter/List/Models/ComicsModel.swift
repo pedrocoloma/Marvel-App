@@ -8,24 +8,25 @@
 
 import Foundation
 
+struct Thumbnail: Codable {
+    var path: String
+    var `extension`: String
+}
+
+struct Comic: Codable {
+    var id: Int
+    var title: String
+    var description: String?
+    var thumbnail: Thumbnail
+}
+
+struct ComicData: Codable {
+    var offset: Int
+    var results: [Comic]
+}
+
 struct ComicsModel: Codable {
     var code: Int?
     var copyright: String?
     var data: ComicData
-    
-    struct ComicData: Codable {
-        var offset: Int
-        var results: [Comic]
-    }
-    
-    struct Comic: Codable {
-        var id: Int
-        var title: String
-        var thumbnail: Thumbnail
-    }
-    
-    struct Thumbnail: Codable {
-        var path: String
-        var `extension`: String
-    }
 }
