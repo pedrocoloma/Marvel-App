@@ -12,8 +12,8 @@ import CryptoKit
 class API {
     static let baseUrl = "https://gateway.marvel.com/"
 
-    static let publicKey = ""
-    static let privateKey = ""
+    static let publicKey = "38e5baf1fc7824c1388569f93dc7d1ed"
+    static let privateKey = "49b818576f3019760706ea51ca18341a31472e2f"
     
     static func authData() -> String {
         let timestamp = String(describing: Int(NSDate().timeIntervalSince1970))

@@ -12,8 +12,6 @@ class AppCoordinator: Coordinator {
     
     var window: UIWindow?
     
-    var listCoordinator = ComicsCoordinator()
-    
     init(window: UIWindow?) {
         super.init()
         self.window = window
@@ -24,8 +22,6 @@ class AppCoordinator: Coordinator {
     }
     
     override func start() {
-//        listCoordinator = ListCoordinator()
-//        listCoordinator.start()
         let listViewModel = ComicsListViewModel()
         listViewModel.coordinatorDelegate = self
         let heroesViewController = ComicsListViewController(listViewModel)
