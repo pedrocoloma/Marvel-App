@@ -24,6 +24,7 @@
 		F5799E952415D6C800A07563 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5799E942415D6C800A07563 /* API.swift */; };
 		F5799E9B2418578800A07563 /* CryptoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5799E9A2418578800A07563 /* CryptoHelper.swift */; };
 		F58ED92D2422D72E0012AEEF /* ComicsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58ED92C2422D72E0012AEEF /* ComicsModel.swift */; };
+		F5B4AFD3242D6D8000652166 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B4AFD2242D6D8000652166 /* UIViewController+Extensions.swift */; };
 		F5D3D01A2426BE2B00AE0A34 /* ComicsDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D3D0192426BE2B00AE0A34 /* ComicsDetailsViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 		F5799E942415D6C800A07563 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		F5799E9A2418578800A07563 /* CryptoHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoHelper.swift; sourceTree = "<group>"; };
 		F58ED92C2422D72E0012AEEF /* ComicsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsModel.swift; sourceTree = "<group>"; };
+		F5B4AFD2242D6D8000652166 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		F5D3D0192426BE2B00AE0A34 /* ComicsDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsDetailsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -162,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				F5799E9A2418578800A07563 /* CryptoHelper.swift */,
+				F5B4AFD2242D6D8000652166 /* UIViewController+Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 			files = (
 				F5799E952415D6C800A07563 /* API.swift in Sources */,
 				F5D3D01A2426BE2B00AE0A34 /* ComicsDetailsViewModel.swift in Sources */,
+				F5B4AFD3242D6D8000652166 /* UIViewController+Extensions.swift in Sources */,
 				F5799E7E241591E800A07563 /* ComicsListViewController.swift in Sources */,
 				F5799E792415901C00A07563 /* Coordinator.swift in Sources */,
 				F5799E5324158B8F00A07563 /* AppDelegate.swift in Sources */,
