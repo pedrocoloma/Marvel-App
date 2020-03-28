@@ -30,7 +30,7 @@ class ComicsListViewController: UIViewController {
 
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(ComicsListDetailsTableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(UINib(nibName: "ComicsDetailsTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
 
         self.title = "Comics"
     }
@@ -42,13 +42,17 @@ extension ComicsListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = viewModel?.comics?[indexPath.row].title
-        return cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ComicsDetailsTableViewCell
+        cell?.setup(comic: (viewModel?.comics?[indexPath.row])!)
+        return cell!
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         viewModel?.didSelect(row: indexPath.row)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CGFloat(100.0)
     }
     
 }
