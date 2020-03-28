@@ -18,17 +18,14 @@ class ComicsDetailsViewModel {
     var viewDelegate: ComicsDetailsViewModelViewDelegate?
     
     init(_ comic: Comic) {
-        getImage()
         self.comic = comic
-        
         getImage()
     }
     
     func getImage() {
-        let api = API()
-        
         guard let thumbnail = comic?.thumbnail else { return }
-        api.download(endpoint: .comicDetailsImage(thumbnail)) { (data, response, error) in
+        
+        API.download(endpoint: .comicDetailsImage(thumbnail)) { (data, response, error) in
             if let data = data {
                 self.viewDelegate?.didLoadImageWithSuccess(image: data)
             }

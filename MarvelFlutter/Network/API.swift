@@ -60,7 +60,8 @@ class API {
         }
     }
     
-    func fetch(endpoint: Endpoint, callback: @escaping (_ data: Data?, _ response: URLResponse?, _ error: Error?) -> Void) {
+    static func fetch(endpoint: Endpoint, callback: @escaping (_ data: Data?,
+        _ response: URLResponse?, _ error: Error?) -> Void) {
         
         print("\n====  REQUEST \(endpoint.url)  ====")
         
@@ -91,7 +92,8 @@ class API {
         task.resume()
     }
     
-    func download(endpoint: Endpoint, callback: @escaping (_ data: Data?, _ response: URLResponse?, _ error: Error?) -> Void) {
+    static func download(endpoint: Endpoint, callback: @escaping (_ data: Data?,
+        _ response: URLResponse?, _ error: Error?) -> Void) {
         
         print("\n====  DOWNLOAD \(endpoint.url)  ====")
         

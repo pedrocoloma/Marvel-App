@@ -29,8 +29,7 @@ class ComicsListViewModel {
     }
     
     func getData() {
-        let api = API()
-        api.fetch(endpoint: .comics, callback: { (data, response, error) in
+        API.fetch(endpoint: .comics, callback: { (data, response, error) in
             
             if let data = data {
                 do {
