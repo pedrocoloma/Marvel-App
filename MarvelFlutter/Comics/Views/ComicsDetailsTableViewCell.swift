@@ -29,3 +29,11 @@ class ComicsDetailsTableViewCell: UITableViewCell {
     }
     
 }
+
+extension ComicsDetailsTableViewCell: ComicsDetailsTableViewCellViewModelViewDelegate {
+    func didLoadImageWithSuccess(image: Data) {
+        DispatchQueue.main.async {
+            self.comicImageView.image = UIImage(data: image)
+        }
+    }
+}
