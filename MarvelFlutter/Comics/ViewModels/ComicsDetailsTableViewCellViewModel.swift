@@ -15,7 +15,7 @@ protocol ComicsDetailsTableViewCellViewModelViewDelegate: AnyObject {
 class ComicsDetailsTableViewCellViewModel {
     
     var comic: Comic?
-    weak var viewDelegate: ComicsDetailsTableViewCellViewModelViewDelegate?
+    var viewDelegate: ComicsDetailsTableViewCellViewModelViewDelegate?
     
     init(comic: Comic) {
         self.comic = comic

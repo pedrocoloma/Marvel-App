@@ -78,6 +78,8 @@ extension ComicsListViewController: UITableViewDelegate, UITableViewDataSource {
         }
         
         cell?.setup(comic: comic)
+        let cellViewModel = ComicsDetailsTableViewCellViewModel(comic: (viewModel?.comics?[indexPath.row])!)
+        cellViewModel.viewDelegate = cell
         return cell!
     }
     
