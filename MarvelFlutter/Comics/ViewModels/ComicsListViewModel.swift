@@ -45,7 +45,7 @@ class ComicsListViewModel {
         })
     }
     
-    func didSelect(row: Int) {
-        coordinatorDelegate?.didSelect(comic: (comics?[row])!)
+    func didSelect(comic: Comic) {
+        coordinatorDelegate?.didSelect(comic: comic)
     }
 }

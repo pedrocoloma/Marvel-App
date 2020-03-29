@@ -9,7 +9,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ComicsListViewController" customModule="MarvelFlutter" customModuleProvider="target">
             <connections>
-                <outlet property="searchBar" destination="tRh-mu-8tR" id="EdT-5l-fdr"/>
                 <outlet property="tableView" destination="Rrs-OC-kCm" id="Agc-0q-MOn"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -19,23 +18,16 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="tRh-mu-8tR">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
-                    <textInputTraits key="textInputTraits"/>
-                </searchBar>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Rrs-OC-kCm">
-                    <rect key="frame" x="0.0" y="56" width="414" height="680"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="tRh-mu-8tR" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="3G3-Gn-n2X"/>
                 <constraint firstItem="Rrs-OC-kCm" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="HiY-g1-qgd"/>
                 <constraint firstItem="Rrs-OC-kCm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="MfH-li-p68"/>
-                <constraint firstItem="tRh-mu-8tR" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="WQP-Q0-cTY"/>
-                <constraint firstItem="Rrs-OC-kCm" firstAttribute="top" secondItem="tRh-mu-8tR" secondAttribute="bottom" id="X8Z-SR-Iyf"/>
-                <constraint firstItem="tRh-mu-8tR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ZQY-jV-kQS"/>
+                <constraint firstItem="Rrs-OC-kCm" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="axV-am-sIz"/>
                 <constraint firstItem="Rrs-OC-kCm" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="xEj-Pt-2jg"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
