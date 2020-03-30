@@ -10,6 +10,9 @@ import UIKit
 
 class CharactersDetailsViewController: UIViewController {
 
+    @IBOutlet weak var charracterrImageView: UIImageView!
+    @IBOutlet weak var characterNameLabel: UILabel!
+    @IBOutlet weak var characterDescriptionLabel: UILabel!
     
     var viewModel: CharactersDetailsViewModel?
     
@@ -23,14 +26,30 @@ class CharactersDetailsViewController: UIViewController {
         viewModel.viewDelegate = self
     }
     
+    func setupUI() {
+        if let characterName = viewModel?.character?.name {
+            characterNameLabel.text = characterName
+        }
+        
+        if let characterDescription = viewModel?.character?.description {
+            characterNameLabel.text = characterDescription
+        } else {
+            characterNameLabel.text = "No descrription available."
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.title = "Character"
+        setupUI()
     }
 
 }
 
 extension CharactersDetailsViewController: CharactersDetailsViewModelViewDelegate {
-    
+    func didLoadImageWithSuccess(image: Data) {
+        DispatchQueue.main.async {
+            self.charracterrImageView.image = UIImage(data: image)
+        }
+    }
 }

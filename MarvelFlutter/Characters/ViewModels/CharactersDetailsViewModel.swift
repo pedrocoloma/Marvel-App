@@ -9,8 +9,9 @@
 import Foundation
 
 protocol CharactersDetailsViewModelViewDelegate: AnyObject {
-    
+    func didLoadImageWithSuccess(image: Data)
 }
+
 class CharactersDetailsViewModel {
     
     var character: Character?
@@ -18,5 +19,16 @@ class CharactersDetailsViewModel {
     
     init(character: Character) {
         self.character = character
+        getImage()
+    }
+    
+    func getImage() {
+        guard let thumbnail = character?.thumbnail else { return }
+        
+        API.download(endpoint: .comicDetailsImage(thumbnail)) { (data, response, error) in
+            if let data = data {
+                self.viewDelegate?.didLoadImageWithSuccess(image: data)
+            }
+        }
     }
 }
