@@ -32,11 +32,12 @@ class ComicsListViewController: UIViewController {
     init(_ viewModel: ComicsListViewModel) {
         super.init(nibName: nil, bundle: nil)
         self.viewModel = viewModel
-        self.viewModel?.viewDelegate = self
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.viewModel?.viewDelegate = self
 
         tableView.delegate = self
         tableView.dataSource = self

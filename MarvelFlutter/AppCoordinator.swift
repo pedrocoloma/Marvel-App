@@ -8,31 +8,32 @@
 
 import UIKit
 
-class AppCoordinator: Coordinator {
-    
-    var window: UIWindow?
-    
-    init(window: UIWindow?) {
-        super.init()
-        self.window = window
-        navigationController = UINavigationController()
-        window?.rootViewController = navigationController
-        window?.makeKeyAndVisible()
-        start()
-    }
-    
-    override func start() {
-        let listViewModel = ComicsListViewModel()
-        listViewModel.coordinatorDelegate = self
-        let heroesViewController = ComicsListViewController(listViewModel)
-        navigationController?.pushViewController(heroesViewController, animated: true)
-    }
+protocol AnyTabCoordinator {
+    var rootController: UINavigationController { get set }
 }
 
-extension AppCoordinator: ComicsListViewModelCoorrdinatorDelegate {
-    func didSelect(comic: Comic) {
-        let heroesDetailsViewModel = ComicsDetailsViewModel(comic)
-        let heroesDetailsViewController = ComicsDetailsViewController(heroesDetailsViewModel)
-        navigationController?.pushViewController(heroesDetailsViewController, animated: true)
+class AppCoordinator {
+    
+    var tabBarController: UITabBarController
+    var tabs: [AnyTabCoordinator]
+    var window: UIWindow?
+    
+    public init(window: UIWindow?) {
+        self.tabBarController = UITabBarController()
+        self.window = window
+        window?.rootViewController = tabBarController
+        
+        let tabs = [
+            CharactersTabCoordinator() as AnyTabCoordinator,
+            ComicsTabCoordinator() as AnyTabCoordinator,
+            SettingsTabCoordinator() as AnyTabCoordinator,
+        ]
+        
+        self.tabs = tabs
+    }
+    
+    public func start() {
+        tabBarController.viewControllers = tabs.map { $0.rootController }
+        window?.makeKeyAndVisible()
     }
 }
