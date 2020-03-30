@@ -9,30 +9,15 @@
 import UIKit
 
 class SettingsTabCoordinator: AnyTabCoordinator {
-     let vm: ComicsListViewModel
-     let vc: ComicsListViewController
-     
-     var rootController: UINavigationController
-     
-    var tabBarItem = UITabBarItem(title: "", image: #imageLiteral(resourceName: "icons8-settings-100"), tag: 3)
+    let settingsViewContrroller: SettingsViewController
+    var rootController: UINavigationController
+    var tabBarItem = UITabBarItem(title: "Settiings", image: #imageLiteral(resourceName: "icons8-settings-100"), tag: 3)
      
      init() {
-         
-         vm = ComicsListViewModel()
-         vc = ComicsListViewController(vm)
+         settingsViewContrroller = SettingsViewController()
 
-         rootController = UINavigationController(rootViewController: vc)
+         rootController = UINavigationController(rootViewController: settingsViewContrroller)
          rootController.tabBarItem = tabBarItem
-         
-         vm.coordinatorDelegate = self
+
      }
-}
-
-
-extension SettingsTabCoordinator: ComicsListViewModelCoorrdinatorDelegate {
-    func didSelect(comic: Comic) {
-        let heroesDetailsViewModel = ComicsDetailsViewModel(comic)
-        let heroesDetailsViewController = ComicsDetailsViewController(heroesDetailsViewModel)
-        rootController.pushViewController(heroesDetailsViewController, animated: true)
-    }
 }

@@ -19,8 +19,6 @@ protocol ComicsListViewModelViewDelegate: AnyObject {
 class ComicsListViewModel {
     
     var comics: [Comic]?
-    var myApi = API()
-    
     var coordinatorDelegate: ComicsListViewModelCoorrdinatorDelegate?
     var viewDelegate: ComicsListViewModelViewDelegate?
     

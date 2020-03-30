@@ -10,7 +10,6 @@ import UIKit
 
 class ComicsListViewController: UIViewController {
     
-    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
 
     var viewModel: ComicsListViewModel?
@@ -73,13 +72,13 @@ extension ComicsListViewController: UITableViewDelegate, UITableViewDataSource {
         let comic: Comic
         
         if isFiltering {
-            comic =  (filteredComics[indexPath.row])
+            comic =  filteredComics[indexPath.row]
         } else {
             comic = (viewModel?.comics?[indexPath.row])!
         }
         
         cell?.setup(comic: comic)
-        let cellViewModel = ComicsDetailsTableViewCellViewModel(comic: (viewModel?.comics?[indexPath.row])!)
+        let cellViewModel = ComicsDetailsTableViewCellViewModel(comic: (viewModel?.comics?[indexPath.row])!) //TODO
         cellViewModel.viewDelegate = cell
         return cell!
     }
@@ -99,7 +98,6 @@ extension ComicsListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return CGFloat(100.0)
     }
-    
 }
 
 extension ComicsListViewController: ComicsListViewModelViewDelegate {

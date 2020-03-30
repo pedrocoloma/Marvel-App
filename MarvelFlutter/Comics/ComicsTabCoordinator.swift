@@ -9,8 +9,8 @@
 import UIKit
 
 class ComicsTabCoordinator: AnyTabCoordinator {
-    let vm: ComicsListViewModel
-    let vc: ComicsListViewController
+    let comicsListViewModel: ComicsListViewModel
+    let comicsListViewController: ComicsListViewController
     
     var rootController: UINavigationController
     
@@ -18,21 +18,21 @@ class ComicsTabCoordinator: AnyTabCoordinator {
     
     init() {
         
-        vm = ComicsListViewModel()
-        vc = ComicsListViewController(vm)
+        comicsListViewModel = ComicsListViewModel()
+        comicsListViewController = ComicsListViewController(comicsListViewModel)
 
-        rootController = UINavigationController(rootViewController: vc)
+        rootController = UINavigationController(rootViewController: comicsListViewController)
         rootController.tabBarItem = tabBarItem
         
-        vm.coordinatorDelegate = self
+        comicsListViewModel.coordinatorDelegate = self
     }
     
 }
 
 extension ComicsTabCoordinator: ComicsListViewModelCoorrdinatorDelegate {
     func didSelect(comic: Comic) {
-        let heroesDetailsViewModel = ComicsDetailsViewModel(comic)
-        let heroesDetailsViewController = ComicsDetailsViewController(heroesDetailsViewModel)
-        rootController.pushViewController(heroesDetailsViewController, animated: true)
+        let comicsDetailsViewModel = ComicsDetailsViewModel(comic)
+        let comicsDetailsViewController = ComicsDetailsViewController(comicsDetailsViewModel)
+        rootController.pushViewController(comicsDetailsViewController, animated: true)
     }
 }

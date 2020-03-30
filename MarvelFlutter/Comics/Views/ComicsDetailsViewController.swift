@@ -36,7 +36,6 @@ class ComicsDetailsViewController: UIViewController {
         } else {
             comicsDescriptionLabel.text = "No description available."
         }
-        
     }
     
     override func viewDidLoad() {
