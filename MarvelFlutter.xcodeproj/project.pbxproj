@@ -22,9 +22,9 @@
 		F5799E9B2418578800A07563 /* CryptoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5799E9A2418578800A07563 /* CryptoHelper.swift */; };
 		F58ED92D2422D72E0012AEEF /* ComicsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58ED92C2422D72E0012AEEF /* ComicsModel.swift */; };
 		F5B4AFD3242D6D8000652166 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B4AFD2242D6D8000652166 /* UIViewController+Extensions.swift */; };
-		F5B4AFD6242F873E00652166 /* ComicsDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B4AFD4242F873E00652166 /* ComicsDetailsTableViewCell.swift */; };
-		F5B4AFD7242F873E00652166 /* ComicsDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5B4AFD5242F873E00652166 /* ComicsDetailsTableViewCell.xib */; };
-		F5B4AFD9242FCC8C00652166 /* ComicsDetailsTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B4AFD8242FCC8C00652166 /* ComicsDetailsTableViewCellViewModel.swift */; };
+		F5B4AFD6242F873E00652166 /* ComicsListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B4AFD4242F873E00652166 /* ComicsListTableViewCell.swift */; };
+		F5B4AFD7242F873E00652166 /* ComicsListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5B4AFD5242F873E00652166 /* ComicsListTableViewCell.xib */; };
+		F5B4AFD9242FCC8C00652166 /* ComicsListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B4AFD8242FCC8C00652166 /* ComicsListCellViewModel.swift */; };
 		F5B4AFE32431678F00652166 /* ComicsTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B4AFE22431678F00652166 /* ComicsTabCoordinator.swift */; };
 		F5B4AFE5243167B600652166 /* CharactersTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B4AFE4243167B600652166 /* CharactersTabCoordinator.swift */; };
 		F5B4AFE724316FB400652166 /* SettingsTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B4AFE624316FB400652166 /* SettingsTabCoordinator.swift */; };
@@ -73,9 +73,9 @@
 		F5799E9A2418578800A07563 /* CryptoHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoHelper.swift; sourceTree = "<group>"; };
 		F58ED92C2422D72E0012AEEF /* ComicsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsModel.swift; sourceTree = "<group>"; };
 		F5B4AFD2242D6D8000652166 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
-		F5B4AFD4242F873E00652166 /* ComicsDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsDetailsTableViewCell.swift; sourceTree = "<group>"; };
-		F5B4AFD5242F873E00652166 /* ComicsDetailsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ComicsDetailsTableViewCell.xib; sourceTree = "<group>"; };
-		F5B4AFD8242FCC8C00652166 /* ComicsDetailsTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsDetailsTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		F5B4AFD4242F873E00652166 /* ComicsListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsListTableViewCell.swift; sourceTree = "<group>"; };
+		F5B4AFD5242F873E00652166 /* ComicsListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ComicsListTableViewCell.xib; sourceTree = "<group>"; };
+		F5B4AFD8242FCC8C00652166 /* ComicsListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsListCellViewModel.swift; sourceTree = "<group>"; };
 		F5B4AFE22431678F00652166 /* ComicsTabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsTabCoordinator.swift; sourceTree = "<group>"; };
 		F5B4AFE4243167B600652166 /* CharactersTabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersTabCoordinator.swift; sourceTree = "<group>"; };
 		F5B4AFE624316FB400652166 /* SettingsTabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTabCoordinator.swift; sourceTree = "<group>"; };
@@ -170,8 +170,8 @@
 				F5799E7D241591E800A07563 /* ComicsListViewController.xib */,
 				F5799E902415A3C800A07563 /* ComicsDetailsViewController.swift */,
 				F5799E912415A3C800A07563 /* ComicsDetailsViewController.xib */,
-				F5B4AFD4242F873E00652166 /* ComicsDetailsTableViewCell.swift */,
-				F5B4AFD5242F873E00652166 /* ComicsDetailsTableViewCell.xib */,
+				F5B4AFD4242F873E00652166 /* ComicsListTableViewCell.swift */,
+				F5B4AFD5242F873E00652166 /* ComicsListTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -181,7 +181,7 @@
 			children = (
 				F5799E8D24159F4B00A07563 /* ComicsListViewModel.swift */,
 				F5D3D0192426BE2B00AE0A34 /* ComicsDetailsViewModel.swift */,
-				F5B4AFD8242FCC8C00652166 /* ComicsDetailsTableViewCellViewModel.swift */,
+				F5B4AFD8242FCC8C00652166 /* ComicsListCellViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -373,7 +373,7 @@
 				F5799E7F241591E800A07563 /* ComicsListViewController.xib in Resources */,
 				F5799E932415A3C800A07563 /* ComicsDetailsViewController.xib in Resources */,
 				F5B4AFF124317EB300652166 /* CharactersListViewController.xib in Resources */,
-				F5B4AFD7242F873E00652166 /* ComicsDetailsTableViewCell.xib in Resources */,
+				F5B4AFD7242F873E00652166 /* ComicsListTableViewCell.xib in Resources */,
 				F5B4AFF524318EE000652166 /* CharactersListTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -427,10 +427,10 @@
 				F58ED92D2422D72E0012AEEF /* ComicsModel.swift in Sources */,
 				F5B4B001243196E400652166 /* CharactersDetailsViewModel.swift in Sources */,
 				F5B4AFF72431914B00652166 /* CharactersListCellViewModel.swift in Sources */,
-				F5B4AFD6242F873E00652166 /* ComicsDetailsTableViewCell.swift in Sources */,
+				F5B4AFD6242F873E00652166 /* ComicsListTableViewCell.swift in Sources */,
 				F5799E7B2415903600A07563 /* AppCoordinator.swift in Sources */,
 				F5799E8E24159F4B00A07563 /* ComicsListViewModel.swift in Sources */,
-				F5B4AFD9242FCC8C00652166 /* ComicsDetailsTableViewCellViewModel.swift in Sources */,
+				F5B4AFD9242FCC8C00652166 /* ComicsListCellViewModel.swift in Sources */,
 				F5799E5524158B8F00A07563 /* SceneDelegate.swift in Sources */,
 				F5799E9B2418578800A07563 /* CryptoHelper.swift in Sources */,
 				F5B4AFEB2431793500652166 /* CharactersListViewModel.swift in Sources */,

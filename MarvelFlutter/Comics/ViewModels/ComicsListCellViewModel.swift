@@ -12,7 +12,7 @@ protocol ComicsDetailsTableViewCellViewModelViewDelegate: AnyObject {
     func didLoadImageWithSuccess(image: Data)
 }
 
-class ComicsDetailsTableViewCellViewModel {
+class ComicsListCellViewModel {
     
     var comic: Comic?
     var viewDelegate: ComicsDetailsTableViewCellViewModelViewDelegate?

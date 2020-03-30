@@ -40,7 +40,7 @@ class ComicsListViewController: UIViewController {
 
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UINib(nibName: "ComicsDetailsTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
+        tableView.register(UINib(nibName: "ComicsListTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
 
         self.title = "Comics"
         
@@ -68,7 +68,7 @@ extension ComicsListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ComicsDetailsTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ComicsListTableViewCell
         let comic: Comic
         
         if isFiltering {
@@ -78,7 +78,7 @@ extension ComicsListViewController: UITableViewDelegate, UITableViewDataSource {
         }
         
         cell?.setup(comic: comic)
-        let cellViewModel = ComicsDetailsTableViewCellViewModel(comic: (viewModel?.comics?[indexPath.row])!) //TODO
+        let cellViewModel = ComicsListCellViewModel(comic: (viewModel?.comics?[indexPath.row])!) //TODO
         cellViewModel.viewDelegate = cell
         return cell!
     }

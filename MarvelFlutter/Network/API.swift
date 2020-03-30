@@ -81,7 +81,7 @@ class API {
             
             if let mimeType = httpResponse.mimeType, mimeType == "application/json", let data = data {
                 if (200...299).contains(httpResponse.statusCode) {
-                     print(" ✅ Succeeded \(httpResponse.statusCode)\n \(String(data: data, encoding: .utf8) ?? "")\n")
+                    print(" ✅ Succeeded \(httpResponse.statusCode)\n \(String(data: data, encoding: .utf8)?.prefix(200) ?? "")\n")
                 } else {
                      print(" 🚨 Error \(httpResponse.statusCode)\n \(String(data: data, encoding: .utf8) ?? "")\n")
                 }

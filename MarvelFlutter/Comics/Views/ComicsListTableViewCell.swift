@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ComicsDetailsTableViewCell: UITableViewCell {
+class ComicsListTableViewCell: UITableViewCell {
     
     @IBOutlet weak var comicImageView: UIImageView!
     @IBOutlet weak var comictitleLabel: UILabel!
@@ -30,7 +30,7 @@ class ComicsDetailsTableViewCell: UITableViewCell {
     
 }
 
-extension ComicsDetailsTableViewCell: ComicsDetailsTableViewCellViewModelViewDelegate {
+extension ComicsListTableViewCell: ComicsDetailsTableViewCellViewModelViewDelegate {
     func didLoadImageWithSuccess(image: Data) {
         DispatchQueue.main.async {
             self.comicImageView.image = UIImage(data: image)
