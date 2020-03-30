@@ -11,7 +11,6 @@
 		F5799E5524158B8F00A07563 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5799E5424158B8F00A07563 /* SceneDelegate.swift */; };
 		F5799E5C24158B9000A07563 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5799E5B24158B9000A07563 /* Assets.xcassets */; };
 		F5799E5F24158B9000A07563 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5799E5D24158B9000A07563 /* LaunchScreen.storyboard */; };
-		F5799E6A24158B9000A07563 /* MarvelFlutterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5799E6924158B9000A07563 /* MarvelFlutterTests.swift */; };
 		F5799E7B2415903600A07563 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5799E7A2415903600A07563 /* AppCoordinator.swift */; };
 		F5799E7E241591E800A07563 /* ComicsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5799E7C241591E800A07563 /* ComicsListViewController.swift */; };
 		F5799E7F241591E800A07563 /* ComicsListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5799E7D241591E800A07563 /* ComicsListViewController.xib */; };
@@ -40,6 +39,8 @@
 		F5B4B001243196E400652166 /* CharactersDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B4B000243196E400652166 /* CharactersDetailsViewModel.swift */; };
 		F5B4B0082432257200652166 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B4B0062432257200652166 /* SettingsViewController.swift */; };
 		F5B4B0092432257200652166 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5B4B0072432257200652166 /* SettingsViewController.xib */; };
+		F5B4B00B24325D5300652166 /* ComicsListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B4B00A24325D5300652166 /* ComicsListViewModelTests.swift */; };
+		F5B4B00E2432663B00652166 /* CharactersListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B4B00D2432663B00652166 /* CharactersListViewModelTests.swift */; };
 		F5D3D01A2426BE2B00AE0A34 /* ComicsDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D3D0192426BE2B00AE0A34 /* ComicsDetailsViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -61,7 +62,6 @@
 		F5799E5E24158B9000A07563 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F5799E6024158B9000A07563 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5799E6524158B9000A07563 /* MarvelFlutterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarvelFlutterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F5799E6924158B9000A07563 /* MarvelFlutterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelFlutterTests.swift; sourceTree = "<group>"; };
 		F5799E6B24158B9000A07563 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5799E7A2415903600A07563 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		F5799E7C241591E800A07563 /* ComicsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsListViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +91,8 @@
 		F5B4B000243196E400652166 /* CharactersDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersDetailsViewModel.swift; sourceTree = "<group>"; };
 		F5B4B0062432257200652166 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		F5B4B0072432257200652166 /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		F5B4B00A24325D5300652166 /* ComicsListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsListViewModelTests.swift; sourceTree = "<group>"; };
+		F5B4B00D2432663B00652166 /* CharactersListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListViewModelTests.swift; sourceTree = "<group>"; };
 		F5D3D0192426BE2B00AE0A34 /* ComicsDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsDetailsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -146,8 +148,9 @@
 		F5799E6824158B9000A07563 /* MarvelFlutterTests */ = {
 			isa = PBXGroup;
 			children = (
-				F5799E6924158B9000A07563 /* MarvelFlutterTests.swift */,
 				F5799E6B24158B9000A07563 /* Info.plist */,
+				F5B4B00C243265EF00652166 /* Comics */,
+				F5B4B00F2432664500652166 /* Characters */,
 			);
 			path = MarvelFlutterTests;
 			sourceTree = "<group>";
@@ -261,6 +264,22 @@
 				F5B4AFFD2431965400652166 /* CharactersDetailsViewController.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		F5B4B00C243265EF00652166 /* Comics */ = {
+			isa = PBXGroup;
+			children = (
+				F5B4B00A24325D5300652166 /* ComicsListViewModelTests.swift */,
+			);
+			path = Comics;
+			sourceTree = "<group>";
+		};
+		F5B4B00F2432664500652166 /* Characters */ = {
+			isa = PBXGroup;
+			children = (
+				F5B4B00D2432663B00652166 /* CharactersListViewModelTests.swift */,
+			);
+			path = Characters;
 			sourceTree = "<group>";
 		};
 		F5E18809242803D800FDAAF8 /* Network */ = {
@@ -443,7 +462,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5799E6A24158B9000A07563 /* MarvelFlutterTests.swift in Sources */,
+				F5B4B00B24325D5300652166 /* ComicsListViewModelTests.swift in Sources */,
+				F5B4B00E2432663B00652166 /* CharactersListViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
