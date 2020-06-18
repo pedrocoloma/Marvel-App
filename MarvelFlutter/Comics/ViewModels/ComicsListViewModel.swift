@@ -19,28 +19,25 @@ protocol ComicsListViewModelViewDelegate: AnyObject {
 class ComicsListViewModel {
     
     var comics: [Comic]?
+    let service: ComicsServicing
     var coordinatorDelegate: ComicsListViewModelCoorrdinatorDelegate?
     var viewDelegate: ComicsListViewModelViewDelegate?
     
     init() {
+        service = ComicsService()
         getData()
     }
     
     func getData() {
-        API.fetch(endpoint: .comics, callback: { (data, response, error) in
-            
-            if let data = data {
-                do {
-                    let json = try JSONDecoder().decode(ComicsModel.self, from: data)
-                    
-                    self.comics = json.data.results
-                    self.viewDelegate?.didLoadComicsWithSuccess()
-                    
-                } catch let error as NSError {
-                    print("Failed to load: \(error.localizedDescription)")
-                }
+        
+        service.fetchComics { (result) in
+            switch result {
+            case.success(let comics):
+                self.comics = comics
+            case .failure(let error):
+                print(error.localizedDescription)
             }
-        })
+        }
     }
     
     func didSelect(comic: Comic) {

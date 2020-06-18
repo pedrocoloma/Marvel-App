@@ -15,20 +15,26 @@ protocol ComicsDetailsTableViewCellViewModelViewDelegate: AnyObject {
 class ComicsListCellViewModel {
     
     var comic: Comic?
+    var service: ComicsServicing
     var viewDelegate: ComicsDetailsTableViewCellViewModelViewDelegate?
     
     init(comic: Comic) {
         self.comic = comic
+        service = ComicsService()
         getImage()
     }
     
     func getImage() {
         guard let thumbnail = comic?.thumbnail else { return }
         
-        API.download(endpoint: .comicDetailsImage(thumbnail)) { (data, response, error) in
-            if let data = data {
-                self.viewDelegate?.didLoadImageWithSuccess(image: data)
+        service.downloadComicsDetailsImage(thumbnail: thumbnail) { (result) in
+            switch result {
+            case.success(let image):
+                self.viewDelegate?.didLoadImageWithSuccess(image: image)
+            case .failure(let error):
+                print(error.localizedDescription)
             }
         }
+        
     }
 }

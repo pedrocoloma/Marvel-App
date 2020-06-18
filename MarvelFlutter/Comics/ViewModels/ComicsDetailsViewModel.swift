@@ -15,9 +15,11 @@ protocol ComicsDetailsViewModelViewDelegate: AnyObject {
 class ComicsDetailsViewModel {
     
     var comic: Comic?
+    let service: ComicsServicing
     var viewDelegate: ComicsDetailsViewModelViewDelegate?
     
     init(_ comic: Comic) {
+        self.service = ComicsService()
         self.comic = comic
         getImage()
     }
@@ -25,9 +27,12 @@ class ComicsDetailsViewModel {
     func getImage() {
         guard let thumbnail = comic?.thumbnail else { return }
         
-        API.download(endpoint: .comicDetailsImage(thumbnail)) { (data, response, error) in
-            if let data = data {
-                self.viewDelegate?.didLoadImageWithSuccess(image: data)
+        service.downloadComicsDetailsImage(thumbnail: thumbnail) { (result) in
+            switch result{
+            case .success(let image):
+                self.viewDelegate?.didLoadImageWithSuccess(image: image)
+            case .failure(let error):
+                print(error.localizedDescription)
             }
         }
     }

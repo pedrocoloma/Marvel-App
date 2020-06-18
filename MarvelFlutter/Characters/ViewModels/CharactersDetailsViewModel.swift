@@ -15,19 +15,24 @@ protocol CharactersDetailsViewModelViewDelegate: AnyObject {
 class CharactersDetailsViewModel {
     
     var character: Character?
+    var service: CharactersServicing
     var viewDelegate: CharactersDetailsViewModelViewDelegate?
     
     init(character: Character) {
         self.character = character
+        self.service = CharactersService()
         getImage()
     }
     
     func getImage() {
         guard let thumbnail = character?.thumbnail else { return }
         
-        API.download(endpoint: .comicDetailsImage(thumbnail)) { (data, response, error) in
-            if let data = data {
-                self.viewDelegate?.didLoadImageWithSuccess(image: data)
+        service.downloadThumbnail(thumbnail: thumbnail) { (result) in
+            switch result {
+            case .success(let image):
+                self.viewDelegate?.didLoadImageWithSuccess(image: image)
+            case .failure(let error):
+                print(error.localizedDescription)
             }
         }
     }

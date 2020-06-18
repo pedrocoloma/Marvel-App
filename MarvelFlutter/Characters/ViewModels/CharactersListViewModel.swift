@@ -19,27 +19,25 @@ protocol CharactersListViewModelViewDelegate {
 class CharactersListViewModel {
     
     var characters: [Character]?
+    let service: CharactersServicing
     var coordinatorDelegate: CharactersListViewModelCoordinatorrDelegate?
     var viewDelegate: CharactersListViewModelViewDelegate?
 
     init() {
+        self.service = CharactersService()
         getData()
     }
     
     func getData() {
-        
-        API.fetch(endpoint: .characters, callback: { (data, response, error) in
-        if let data = data {
-            do {
-                let json = try JSONDecoder().decode(CharactersModel.self, from: data)
-                
-                self.characters = json.data.results
+        service.fetchCharacters { result in
+            switch result {
+            case .success(let characters):
+                self.characters = characters
                 self.viewDelegate?.didLoadCharacctersWithSuccess()
+            case .failure(let error):
+                print("\(error.localizedDescription)")
             }
-            catch let error as NSError {
-                print("Failed to load: \(error.localizedDescription)")
-            }
-        }})
+        }
     }
     
     func didSelect(character: Character) {
