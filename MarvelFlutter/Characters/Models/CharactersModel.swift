@@ -13,21 +13,21 @@ struct CharactersComicsData: Codable {
 }
 
 struct CharactersComic: Codable {
-    var resourceURI: String
-    var name: String
+    let resourceURI: String
+    let name: String
 }
 
 struct Character: Codable {
-    var name: String
+    let name: String
     var description: String?
     var thumbnail: Thumbnail?
-    var comics: CharactersComicsData
+    let comics: CharactersComicsData
 }
 
 struct CharactersData: Codable {
-    var results: [Character]
+    let results: [Character]
 }
 
 struct CharactersModel: Codable {
-    var data: CharactersData
+    let data: CharactersData
 }
