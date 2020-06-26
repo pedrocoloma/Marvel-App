@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F56ABF8624A2498F00BB10B9 /* ComicsDetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56ABF8524A2498F00BB10B9 /* ComicsDetailsViewModelTests.swift */; };
 		F5799E5324158B8F00A07563 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5799E5224158B8F00A07563 /* AppDelegate.swift */; };
 		F5799E5524158B8F00A07563 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5799E5424158B8F00A07563 /* SceneDelegate.swift */; };
 		F5799E5C24158B9000A07563 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5799E5B24158B9000A07563 /* Assets.xcassets */; };
@@ -47,6 +48,7 @@
 		F5B4B00B24325D5300652166 /* ComicsListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B4B00A24325D5300652166 /* ComicsListViewModelTests.swift */; };
 		F5B4B00E2432663B00652166 /* CharactersListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B4B00D2432663B00652166 /* CharactersListViewModelTests.swift */; };
 		F5D3D01A2426BE2B00AE0A34 /* ComicsDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D3D0192426BE2B00AE0A34 /* ComicsDetailsViewModel.swift */; };
+		F5E268BA24A53339001F86C3 /* CharactersDetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E268B924A53339001F86C3 /* CharactersDetailsViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F56ABF8524A2498F00BB10B9 /* ComicsDetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsDetailsViewModelTests.swift; sourceTree = "<group>"; };
 		F5799E4F24158B8F00A07563 /* MarvelFlutter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelFlutter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5799E5224158B8F00A07563 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5799E5424158B8F00A07563 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +107,7 @@
 		F5B4B00A24325D5300652166 /* ComicsListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsListViewModelTests.swift; sourceTree = "<group>"; };
 		F5B4B00D2432663B00652166 /* CharactersListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListViewModelTests.swift; sourceTree = "<group>"; };
 		F5D3D0192426BE2B00AE0A34 /* ComicsDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsDetailsViewModel.swift; sourceTree = "<group>"; };
+		F5E268B924A53339001F86C3 /* CharactersDetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersDetailsViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,8 +163,8 @@
 			isa = PBXGroup;
 			children = (
 				F5799E6B24158B9000A07563 /* Info.plist */,
-				F5B4B00C243265EF00652166 /* Comics */,
 				F5B4B00F2432664500652166 /* Characters */,
+				F5B4B00C243265EF00652166 /* Comics */,
 			);
 			path = MarvelFlutterTests;
 			sourceTree = "<group>";
@@ -297,7 +301,7 @@
 		F5B4B00C243265EF00652166 /* Comics */ = {
 			isa = PBXGroup;
 			children = (
-				F5B4B00A24325D5300652166 /* ComicsListViewModelTests.swift */,
+				F5E268BC24A5473A001F86C3 /* ViewModels */,
 			);
 			path = Comics;
 			sourceTree = "<group>";
@@ -305,7 +309,7 @@
 		F5B4B00F2432664500652166 /* Characters */ = {
 			isa = PBXGroup;
 			children = (
-				F5B4B00D2432663B00652166 /* CharactersListViewModelTests.swift */,
+				F5E268BB24A5472B001F86C3 /* ViewModels */,
 			);
 			path = Characters;
 			sourceTree = "<group>";
@@ -332,6 +336,24 @@
 				F5799E6024158B9000A07563 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F5E268BB24A5472B001F86C3 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				F5B4B00D2432663B00652166 /* CharactersListViewModelTests.swift */,
+				F5E268B924A53339001F86C3 /* CharactersDetailsViewModelTests.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		F5E268BC24A5473A001F86C3 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				F5B4B00A24325D5300652166 /* ComicsListViewModelTests.swift */,
+				F56ABF8524A2498F00BB10B9 /* ComicsDetailsViewModelTests.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -499,6 +521,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5B4B00B24325D5300652166 /* ComicsListViewModelTests.swift in Sources */,
+				F5E268BA24A53339001F86C3 /* CharactersDetailsViewModelTests.swift in Sources */,
+				F56ABF8624A2498F00BB10B9 /* ComicsDetailsViewModelTests.swift in Sources */,
 				F5B4B00E2432663B00652166 /* CharactersListViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

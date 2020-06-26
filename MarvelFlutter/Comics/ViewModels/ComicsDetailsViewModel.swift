@@ -10,12 +10,13 @@ import Foundation
 
 protocol ComicsDetailsViewModelViewDelegate: AnyObject {
     func didLoadImageWithSuccess(image: Data)
+    func show(error: MarvelError)
 }
 
 class ComicsDetailsViewModel {
     
     var comic: Comic?
-    let service: ComicsServicing
+    var service: ComicsServicing
     var viewDelegate: ComicsDetailsViewModelViewDelegate?
     
     init(_ comic: Comic) {
@@ -32,7 +33,7 @@ class ComicsDetailsViewModel {
             case .success(let image):
                 self.viewDelegate?.didLoadImageWithSuccess(image: image)
             case .failure(let error):
-                print(error.localizedDescription)
+                self.viewDelegate?.show(error: error)
             }
         }
     }

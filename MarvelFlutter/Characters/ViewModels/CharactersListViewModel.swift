@@ -14,12 +14,13 @@ protocol CharactersListViewModelCoordinatorrDelegate {
 
 protocol CharactersListViewModelViewDelegate {
     func didLoadCharacctersWithSuccess()
+    func show(error: MarvelError)
 }
 
 class CharactersListViewModel {
     
     var characters: [Character]?
-    let service: CharactersServicing
+    var service: CharactersServicing
     var coordinatorDelegate: CharactersListViewModelCoordinatorrDelegate?
     var viewDelegate: CharactersListViewModelViewDelegate?
 
@@ -35,7 +36,7 @@ class CharactersListViewModel {
                 self.characters = characters
                 self.viewDelegate?.didLoadCharacctersWithSuccess()
             case .failure(let error):
-                print("\(error.localizedDescription)")
+                self.viewDelegate?.show(error: error)
             }
         }
     }

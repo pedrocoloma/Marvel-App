@@ -101,6 +101,11 @@ extension ComicsListViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension ComicsListViewController: ComicsListViewModelViewDelegate {
+    func show(error: MarvelError) {
+        let alert = UIAlertController(title: "Erroo", message: error.localizedDescription, preferredStyle: .alert)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     func didLoadComicsWithSuccess() {
         DispatchQueue.main.async {
             self.tableView.reloadData()

@@ -9,7 +9,8 @@
 import Foundation
 
 protocol ComicsDetailsTableViewCellViewModelViewDelegate: AnyObject {
-    func didLoadImageWithSuccess(image: Data)
+    func show(image: Data)
+    func show(error: MarvelError)
 }
 
 class ComicsListCellViewModel {
@@ -30,9 +31,9 @@ class ComicsListCellViewModel {
         service.downloadComicsDetailsImage(thumbnail: thumbnail) { (result) in
             switch result {
             case.success(let image):
-                self.viewDelegate?.didLoadImageWithSuccess(image: image)
+                self.viewDelegate?.show(image: image)
             case .failure(let error):
-                print(error.localizedDescription)
+                self.viewDelegate?.show(error: error)
             }
         }
         

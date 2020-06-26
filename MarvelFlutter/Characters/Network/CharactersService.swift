@@ -9,12 +9,12 @@
 import Foundation
 
 protocol CharactersServicing {
-    func fetchCharacters(completion: @escaping (Result<[Character], Error>) -> Void)
+    func fetchCharacters(completion: @escaping (Result<[Character], MarvelError>) -> Void)
     func downloadThumbnail(thumbnail: Thumbnail, completion: @escaping (Result<Data, MarvelError>) -> Void)
 }
 
 class CharactersService: Service, CharactersServicing {
-    func fetchCharacters(completion: @escaping (Result<[Character], Error>) -> Void) {
+    func fetchCharacters(completion: @escaping (Result<[Character], MarvelError>) -> Void) {
         
         fetch(endpoint: .characters, callback: { (data, response, error) in
         if let data = data {
@@ -23,8 +23,8 @@ class CharactersService: Service, CharactersServicing {
                 
                 completion(.success(json.data.results))
             }
-            catch let error as NSError {
-                print("Failed to load: \(error.localizedDescription)")
+            catch {
+                completion(.failure(.network))
             }
         }})
     }

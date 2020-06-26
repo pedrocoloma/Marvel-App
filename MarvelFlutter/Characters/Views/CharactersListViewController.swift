@@ -106,6 +106,11 @@ extension CharactersListViewController: CharactersListViewModelViewDelegate {
             self.tableView.reloadData()
         }
     }
+    
+    func show(error: MarvelError) {
+        let alert = UIAlertController(title: "Erro", message: error.localizedDescription, preferredStyle: .alert)
+        present(alert, animated: true, completion: nil)
+    }
 }
 
 extension CharactersListViewController: UISearchResultsUpdating {

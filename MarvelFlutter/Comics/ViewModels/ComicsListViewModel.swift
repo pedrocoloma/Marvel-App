@@ -14,12 +14,13 @@ protocol ComicsListViewModelCoorrdinatorDelegate: AnyObject {
 
 protocol ComicsListViewModelViewDelegate: AnyObject {
     func didLoadComicsWithSuccess()
+    func show(error: MarvelError)
 }
 
 class ComicsListViewModel {
     
     var comics: [Comic]?
-    let service: ComicsServicing
+    var service: ComicsServicing
     var coordinatorDelegate: ComicsListViewModelCoorrdinatorDelegate?
     var viewDelegate: ComicsListViewModelViewDelegate?
     
@@ -29,13 +30,13 @@ class ComicsListViewModel {
     }
     
     func getData() {
-        
         service.fetchComics { (result) in
             switch result {
             case.success(let comics):
                 self.comics = comics
+                self.viewDelegate?.didLoadComicsWithSuccess()
             case .failure(let error):
-                print(error.localizedDescription)
+                self.viewDelegate?.show(error: error)
             }
         }
     }

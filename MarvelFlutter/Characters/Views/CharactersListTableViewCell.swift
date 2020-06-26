@@ -34,7 +34,11 @@ class CharactersListTableViewCell: UITableViewCell {
 }
 
 extension CharactersListTableViewCell: CharactersListCellViewModelViewDelegate {
-    func didLoadImageWithSuccess(image: Data) {
+    func show(error: MarvelError) {
+        
+    }
+    
+    func show(image: Data) {
         DispatchQueue.main.async {
             self.backgroundImageView.image = UIImage(data: image)
         }

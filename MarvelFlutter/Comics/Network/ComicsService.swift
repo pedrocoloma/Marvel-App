@@ -9,12 +9,12 @@
 import Foundation
 
 protocol ComicsServicing {
-    func fetchComics(completion: @escaping (Result<[Comic]?, Error>) -> Void)
+    func fetchComics(completion: @escaping (Result<[Comic]?, MarvelError>) -> Void)
     func downloadComicsDetailsImage(thumbnail: Thumbnail,completion: @escaping (Result<Data, MarvelError>) -> Void)
 }
 
 class ComicsService: Service, ComicsServicing {
-    func fetchComics(completion: @escaping (Result<[Comic]?, Error>) -> Void) {
+    func fetchComics(completion: @escaping (Result<[Comic]?, MarvelError>) -> Void) {
         
         fetch(endpoint: .comics, callback: { (data, responser, error) in
             if let data = data {
@@ -22,8 +22,8 @@ class ComicsService: Service, ComicsServicing {
                     let json = try JSONDecoder().decode(ComicsModel.self, from: data)
 
                     completion(.success(json.data.results))
-                } catch  let error as NSError {
-                    completion(.failure(error))
+                } catch  {
+                    completion(.failure(.parse))
                 }
             }
         })

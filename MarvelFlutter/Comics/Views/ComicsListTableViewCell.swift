@@ -31,7 +31,11 @@ class ComicsListTableViewCell: UITableViewCell {
 }
 
 extension ComicsListTableViewCell: ComicsDetailsTableViewCellViewModelViewDelegate {
-    func didLoadImageWithSuccess(image: Data) {
+    func show(error: MarvelError) {
+        
+    }
+    
+    func show(image: Data) {
         DispatchQueue.main.async {
             self.comicImageView.image = UIImage(data: image)
         }

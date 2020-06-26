@@ -51,4 +51,9 @@ extension ComicsDetailsViewController: ComicsDetailsViewModelViewDelegate {
             self.imageView.image = UIImage(data: image)
         }
     }
+    
+    func show(error: MarvelError) {
+        let alert = UIAlertController(title: "Erro", message: error.localizedDescription, preferredStyle: .alert)
+        self.present(alert, animated: true, completion: nil)
+    }
 }

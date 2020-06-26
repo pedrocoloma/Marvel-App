@@ -47,7 +47,12 @@ class CharactersDetailsViewController: UIViewController {
 }
 
 extension CharactersDetailsViewController: CharactersDetailsViewModelViewDelegate {
-    func didLoadImageWithSuccess(image: Data) {
+    func show(error: MarvelError) {
+        let alert = UIAlertController(title: "Erro", message: error.localizedDescription, preferredStyle: .alert)
+        present(alert, animated: true, completion: nil)
+    }
+    
+    func show(image: Data) {
         DispatchQueue.main.async {
             self.charracterrImageView.image = UIImage(data: image)
         }
