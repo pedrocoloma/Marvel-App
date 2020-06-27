@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F51C85F024A7D1AA00349782 /* App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F51C85ED24A7D19F00349782 /* App.framework */; };
+		F51C85F124A7D1AA00349782 /* App.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F51C85ED24A7D19F00349782 /* App.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F51C85F324A7D1AB00349782 /* Flutter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F51C85EC24A7D19E00349782 /* Flutter.framework */; };
+		F51C85F424A7D1AB00349782 /* Flutter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F51C85EC24A7D19E00349782 /* Flutter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F56ABF8624A2498F00BB10B9 /* ComicsDetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56ABF8524A2498F00BB10B9 /* ComicsDetailsViewModelTests.swift */; };
 		F5799E5324158B8F00A07563 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5799E5224158B8F00A07563 /* AppDelegate.swift */; };
 		F5799E5524158B8F00A07563 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5799E5424158B8F00A07563 /* SceneDelegate.swift */; };
@@ -61,7 +65,24 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		F51C85F224A7D1AA00349782 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F51C85F124A7D1AA00349782 /* App.framework in Embed Frameworks */,
+				F51C85F424A7D1AB00349782 /* Flutter.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		F51C85EC24A7D19E00349782 /* Flutter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Flutter.framework; sourceTree = "<group>"; };
+		F51C85ED24A7D19F00349782 /* App.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = App.framework; sourceTree = "<group>"; };
 		F56ABF8524A2498F00BB10B9 /* ComicsDetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsDetailsViewModelTests.swift; sourceTree = "<group>"; };
 		F5799E4F24158B8F00A07563 /* MarvelFlutter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelFlutter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5799E5224158B8F00A07563 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +136,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F51C85F024A7D1AA00349782 /* App.framework in Frameworks */,
+				F51C85F324A7D1AB00349782 /* Flutter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,12 +151,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F51C85E724A7D15A00349782 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F51C85ED24A7D19F00349782 /* App.framework */,
+				F51C85EC24A7D19E00349782 /* Flutter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F5799E4624158B8F00A07563 = {
 			isa = PBXGroup;
 			children = (
 				F5799E5124158B8F00A07563 /* MarvelFlutter */,
 				F5799E6824158B9000A07563 /* MarvelFlutterTests */,
 				F5799E5024158B8F00A07563 /* Products */,
+				F51C85E724A7D15A00349782 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -367,6 +400,7 @@
 				F5799E4C24158B8F00A07563 /* Frameworks */,
 				F5799E4D24158B8F00A07563 /* Resources */,
 				F5799E9724169D3300A07563 /* ShellScript */,
+				F51C85F224A7D1AA00349782 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -668,6 +702,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = MarvelFlutter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -685,6 +723,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = MarvelFlutter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

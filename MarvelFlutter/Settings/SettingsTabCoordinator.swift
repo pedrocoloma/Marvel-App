@@ -7,14 +7,18 @@
 //
 
 import UIKit
+import Flutter
 
 class SettingsTabCoordinator: AnyTabCoordinator {
-    let settingsViewContrroller: SettingsViewController
+    let settingsViewContrroller: UIViewController
     var rootController: UINavigationController
     var tabBarItem = UITabBarItem(title: "Settiings", image: #imageLiteral(resourceName: "icons8-settings-100"), tag: 3)
      
      init() {
-         settingsViewContrroller = SettingsViewController()
+        
+        let flutterEngine = (UIApplication.shared.delegate as! AppDelegate).flutterEngine
+        settingsViewContrroller = FlutterViewController(engine: flutterEngine, nibName: nil, bundle: nil)
+        settingsViewContrroller.title = "Settings"
 
          rootController = UINavigationController(rootViewController: settingsViewContrroller)
          rootController.tabBarItem = tabBarItem
